@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <title> review</title>
+</head>
+<body>
+    <div class="header">
+    <a class="review_H_text" href="/books">Home</a> |  | <a href="/logout">Logout</a>
+    </div>
+    <div class="setting" >
+    <h3>{{books.tital}}</h3>
+    <p>Author:{{books.author.auth_name}}</p>
+
+
+
+
+    <h5>Reviews</h5>
+    <hr>
+    {% for r in reviews %}
+
+
+    <p>Rating {{r.rating}}</p>
+    <p> <a href="/user/{{r.users.id}}">{{r.users.name}}</a>  says! {{r.review}}-</p>
+
+    <p>Post On--{{r.created_at |date:'M-d-Y'}}</p>
+    <p>---------------------------------------</p>
+    <button><a href="delete/{{r.id}}">Delete this review</a></button>
+
+
+    {% endfor %}
+
+   
+</div>
+<div class="review_box">
+        
+        <form action="/books/{{books.id}}/review" method="POST">
+            {% csrf_token %}
+        
+        <p>Add review:</p>
+        <input type="text" name="review" id="">
+        <p>Rating
+        <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5</option>
+        </select></p>
+        <input type="submit" value="suubmit Review">
+        
+        </form>
+
+
+
+</div>
+
+
+
+</body>
+</html>

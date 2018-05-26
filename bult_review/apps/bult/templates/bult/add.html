@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <title>add book and review</title>
+</head>
+<body>
+        <div class="header">
+        <a class="review_H_text" href="/books">Home</a> |  | <a href="/logout">Logout</a>
+        </div> 
+    
+    <h4>Add a New book Title and a Review:</h4>
+
+<div class="setting">
+
+<form action="/books/record" method="POST">
+    {% csrf_token %}
+
+<p>Book Tital:</p>
+<input type="text" name = "book_tital">
+<p>Author:</p>
+
+<select name="old_author" id="">
+    
+    {% for a in Old_author %}
+
+<option value="{{a.auth_name}}">{{a.auth_name}}</option>
+
+{%endfor%}
+</select>
+<p>or add a new author:</p>
+<input type="text" name = "add_aouthor">
+<p>Review:</p>
+<input type="text" name="review" id="">
+<p>Rating
+<select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="4">5</option>
+</select></p>
+<input type="submit" value="Add Book and Review">
+
+</form>
+
+</div>
+</body>
+</html>

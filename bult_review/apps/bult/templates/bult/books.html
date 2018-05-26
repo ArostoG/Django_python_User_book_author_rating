@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <title>Books_Home</title>
+</head>
+
+<body class="body">
+
+    <div class="header">
+    <h4 class="first_H_text">Welcome,{{users.name}}</h4> <a href="user/books/add">Add Book and review</a> | | <a href="/logout">Logout</a>
+    </div>
+   <br> 
+   <div class="second_header">
+   <h4 class="H_text01">Recent Book Reviews</h4>  <h4 class="H_text02">Others book with Reviews!</h4>
+   </div>
+    <Div class="setting">
+        
+
+        {% for r in recent %}
+        <h4>
+            <a href="books/{{r.books.id}}">{{r.books.tital}}</a>
+        </h4>
+        <p>Rating {{r.rating}}</p>
+        <p>
+            <a href="/user/{{r.users.id}}">{{r.users.name}} </a>Says!{{r.review}}</p>
+        <h6>{{r.created_at|date:'M-d-Y'}}</h6>
+
+
+        {% endfor %}
+
+    </Div>
+
+
+    <Div class="setting1">
+        <h4>Others book with Reviews!</h4>
+
+
+        {% for b in books %}
+
+        <p>
+            <a href="/books/{{b.id}}">{{b.tital}}</a>
+           
+        </p>
+
+
+        {% endfor %}
+
+
+    </div>
+
+</body>
+
+</html>

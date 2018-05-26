@@ -1,0 +1,115 @@
+
+.header{
+    width: 1250px;
+    height: 65px;
+    background-color: rgba(190, 194, 196, 0.26);
+}
+.first_H_text{
+    margin: 0px;
+    display: inline-block;
+    margin-right: 923px;
+    padding: 5px;
+
+}
+.review_H_text{
+    margin: 0px;
+    display: inline-block;
+    margin-left: 1117px;
+    padding: 5px; 
+}
+.review_H_text1{
+    margin: 0px;
+    display: inline-block;
+    margin-left: 957px;
+    padding: 5px; 
+}
+.second_header{
+    width: 1250px;
+    height: 28px;
+    background-color: rgba(232, 232, 233, 0.26);
+  
+}
+.H_text01{
+    margin: 0px;
+    display: inline-block;
+    margin-right: 632px;  
+}
+.H_text02{
+    margin: 0px;
+    display: inline-block;
+   
+}
+.setting{
+    display: inline-block;
+    width: 412px;
+    box-shadow: 0 0 1px 2px black;
+    padding: 10px;
+    background-color: rgba(190, 194, 196, 0.26);
+    width: 650px;
+    height: 765px;
+    overflow: auto;
+}
+.login{
+    display: inline-block;
+    width: 412px;
+    box-shadow: 0 0 1px 2px black;
+    padding: 10px;
+    background-color: #fffbc8fd;
+    width: 410px;
+    height: 120px;
+    overflow: auto;
+    margin-top: 200px;
+
+}
+.review_box{
+
+    width: 554px;
+    background-color: #fffbc8fd;
+    padding: 10px;
+    box-shadow: 0 0 1px 2px black;
+    vertical-align: top;
+    display: inline-block;
+
+}
+.setting1{
+
+    display: inline-block;
+    width: 412px;
+    box-shadow: 0 0 1px 2px black;
+    padding: 10px;
+    margin-left: 104px;
+    background-color: rgba(190, 194, 196, 0.26);
+    width: 450px;
+    height: 450px;
+    overflow: auto;
+    vertical-align: top;
+}
+.setting02{
+    display: inline-block;
+    width: 400px;
+    box-shadow: 0 0 1px 2px black;
+    padding: 10px;
+    background-color: rgba(190, 194, 196, 0.26);
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.body{
+    /* padding: 11px;
+    box-shadow: 0 0 11px 5px black;
+    background-color: #8a8a8a; */
+}
+
+.scrole{
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: auto;
+}
+.color{
+    color:white;
+}
+#color1{
+    color:rgb(255, 0, 0);
+}
